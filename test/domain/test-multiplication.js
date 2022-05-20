@@ -32,21 +32,21 @@ describe('Testando multiplicações com múltiplos parametros diferentes', ()=>{
 
     it('6º Teste: Recebendo 3 parametros, sendo 2 decimais', async() => {
         const resultadoMultiplicacao = await funcaoDeMultiplicar(1.1, 2.2, -2);   
-        expect(resultadoMultiplicacao).to.be.closeTo(+4.84, 0.001);                 
+        expect(resultadoMultiplicacao).to.be.closeTo(-4.84, 0.01);                 
     });
 
     it('7º Teste: Recebendo 3 parametros, sendo um positivo no começo', async() => {
         const resultadoMultiplicacao = await funcaoDeMultiplicar(3, -8, -14);
-        expect(resultadoMultiplicacao).to.equal(-19);        
+        expect(resultadoMultiplicacao).to.equal(336);        
     });
 
     it('8º Teste: Recebendo 3 parametros, sendo um positivo no meio', async() => {
         const resultadoMultiplicacao = await funcaoDeMultiplicar(-3, 8, -14);
-        expect(resultadoMultiplicacao).to.equal(-9);        
+        expect(resultadoMultiplicacao).to.equal(336);        
     });
 
     it('9º Teste: Recebendo 3 parametros, sendo um positivo no final', async() => {
         const resultadoMultiplicacao = await funcaoDeMultiplicar(-3, -8, 14);
-        expect(resultadoMultiplicacao).to.equal(3);        
+        expect(resultadoMultiplicacao).to.equal(336);        
     });
 })

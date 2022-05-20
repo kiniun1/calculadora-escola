@@ -32,22 +32,22 @@ describe('Testando divisões com múltiplos parametros diferentes', ()=>{
 
     it('6º Teste: Recebendo 3 parametros, sendo 2 decimais', async() => {
         const resultadoDivisao = await funcaoDeDividir(4.4, 1.1, -2);   
-        expect(resultadoDivisao).to.equal(2);                 
+        expect(resultadoDivisao).to.equal(-2);                 
     });
 
     it('7º Teste: Recebendo 3 parametros, sendo 3 decimais', async() => {
         const resultadoDivisao = await funcaoDeDividir(84.8, 4.5, -7.8);   
-        expect(resultadoDivisao).to.be.closeTo(-2.692, 0.001);                 
+        expect(resultadoDivisao).to.be.closeTo(-2.415, 0.001);                 
     });
 
     it('8º Teste: Recebendo 3 parametros, sendo um positivo no começo', async() => {
         const resultadoDivisao = await funcaoDeDividir(48, -8, -2);
-        expect(resultadoDivisao).to.equal(-19);        
+        expect(resultadoDivisao).to.equal(3);        
     });
 
     it('9º Teste: Recebendo 3 parametros, sendo um positivo no meio', async() => {
         const resultadoDivisao = await funcaoDeDividir(-48, 8, -2);
-        expect(resultadoDivisao).to.equal(-9);        
+        expect(resultadoDivisao).to.equal(3);        
     });
 
     it('10º Teste: Recebendo 3 parametros, sendo um positivo no final', async() => {
