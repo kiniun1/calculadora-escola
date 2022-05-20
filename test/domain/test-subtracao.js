@@ -3,7 +3,7 @@ const expect = require("chai").expect;
 const funcaoDeSubtracao = require('../../domain/subtracao');
 
 
-describe('Testando subtrações com múltiplos parametros diferentes', ()=>{
+describe('Função de subtração', ()=>{
     it('1º Teste: Recebendo 1 parametro, o valor deve ser o mesmo do parametro', async()=>{
         const resultadoSubtracao = await funcaoDeSubtracao(1)
         expect(resultadoSubtracao).to.equal(1);

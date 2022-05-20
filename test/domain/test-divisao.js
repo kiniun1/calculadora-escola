@@ -4,7 +4,7 @@ const expect = require("chai").expect;
 const funcaoDeDividir = require('../../domain/divisao');
 
 
-describe('Testando divisões com múltiplos parametros diferentes', ()=>{
+describe('Função de divisão', ()=>{
     it('1º Teste: Recebendo 1 parametro, o valor deve ser o mesmo do parametro', async()=>{
         const resultadoDivisao = await funcaoDeDividir(1)
         expect(resultadoDivisao).to.equal(1);

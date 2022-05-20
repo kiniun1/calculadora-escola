@@ -4,7 +4,7 @@ const expect = require("chai").expect;
 const funcaoDeAdicao = require('../../domain/adicao');
 
 
-describe('Testando adições com múltiplos parametros diferentes', ()=>{
+describe('Função de adição', ()=>{
     it('1º Teste: Recebendo 1 parametro, o valor deve ser o mesmo do parametro', async()=>{
         const resultadoAdicao = await funcaoDeAdicao(1)
         expect(resultadoAdicao).to.equal(1);

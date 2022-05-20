@@ -4,7 +4,7 @@ const expect = require("chai").expect;
 const funcaoDeMultiplicar = require('../../domain/multiplicacao');
 
 
-describe('Testando multiplicações com múltiplos parametros diferentes', ()=>{
+describe('Função de multiplicação', ()=>{
     it('1º Teste: Recebendo 1 parametro, o valor deve ser o mesmo do parametro', async()=>{
         const resultadoMultiplicacao = await funcaoDeMultiplicar(1)
         expect(resultadoMultiplicacao).to.equal(1);
