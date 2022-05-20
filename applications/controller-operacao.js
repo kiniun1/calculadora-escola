@@ -14,11 +14,10 @@ const controllerOperacao = async(primeiroValor, operador, segundoValor) => {
             '/': (a, b) => funcaoDeDivisao(a, b),
             '%': (a, b) => funcaoDePorcentagem(a, b),
             '√': (a, b) => funcaoDeRaiz(a, b),
-          };
-        
-          return actions[operador]?.(primeiroValor, segundoValor) ?? "Calculo não reconhecido";
+        };
+        return actions[operador]?.(primeiroValor, segundoValor) ?? "Calculo não reconhecido";
     } catch (erro) {
         console.log(erro);
-    }
+    };
 };
 module.exports = controllerOperacao;

@@ -11,8 +11,7 @@ const ValidacaoValoresSaoNumericos = async(dado)=>{
     } catch (erro) {
         const erroValidacao = await httpStatusResponse(500, (erro.message), 'validacao-numero');
         return erroValidacao;
-    }
-    
-}
+    }; 
+};
 
 module.exports = ValidacaoValoresSaoNumericos;

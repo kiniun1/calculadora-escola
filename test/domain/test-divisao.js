@@ -1,4 +1,3 @@
-
 const { describe } = require('mocha');
 const expect = require("chai").expect;
 const funcaoDeDividir = require('../../domain/divisao');
@@ -6,24 +5,24 @@ const funcaoDeDividir = require('../../domain/divisao');
 
 describe('Função de divisão', ()=>{
     it('1º Teste: Recebendo 1 parametro, o valor deve ser o mesmo do parametro', async()=>{
-        const resultadoDivisao = await funcaoDeDividir(1)
+        const resultadoDivisao = await funcaoDeDividir(1);
         expect(resultadoDivisao).to.equal(1);
-    })
+    });
 
     it('2º Teste: Recebendo 2 parametros', async()=>{
         const resultadoDivisao = await funcaoDeDividir(12, 6);
         expect(resultadoDivisao).to.equal(2);
-    })
+    });
 
     it('3º Teste: Recebendo 2 parametros com posições invertidas', async()=>{
         const resultadoDivisao = await funcaoDeDividir(6, 12);
         expect(resultadoDivisao).to.equal(0.5);
-    })
+    });
 
     it('4º Teste: Recebendo 4 parametros', async()=>{
         const resultadoDivisao = await funcaoDeDividir(60, 2, 2, 3);
         expect(resultadoDivisao).to.equal(5);
-    })
+    });
 
     it('5º Teste: Recebendo 3 parametros, sendo um negativo', async() => {
         const resultadoDivisao = await funcaoDeDividir(44, 2, -11);
@@ -54,4 +53,4 @@ describe('Função de divisão', ()=>{
         const resultadoDivisao = await funcaoDeDividir(-48, -8, 2);
         expect(resultadoDivisao).to.equal(3);        
     });
-})
+});

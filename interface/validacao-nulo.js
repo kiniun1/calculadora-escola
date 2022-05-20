@@ -11,8 +11,7 @@ const ValidacaoDadosVaziosOuNulos = async(dado)=>{
     } catch (erro) {
         const erroValidacao = await httpStatusResponse(500, (erro.message), 'validacao-nulo');
         return erroValidacao;
-    }
-    
-}
+    };
+};
 
 module.exports = ValidacaoDadosVaziosOuNulos;
