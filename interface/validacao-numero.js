@@ -2,7 +2,6 @@ const httpStatusResponse = require('../commons/http-response/http-status-respons
 
 const ValidacaoValoresSaoNumericos = async(dado)=>{
     try {
-        console.log(typeof(dado));
         const validacaoValores = {
             string: 'string',
             number: 'ok',
