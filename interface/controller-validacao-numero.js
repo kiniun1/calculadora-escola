@@ -12,23 +12,23 @@ const controllerValidacaoNumeros = async(dados)=>{
         
         if(respostaNumero[0] === 'ok' && respostaNumero[1] === 'ok'){
 
-            return dados;
+            return [dados[0], dados[1], 'ok'];
 
         }else if(respostaNumero[0] === 'string' && respostaNumero[1] === 'ok'){
 
             resultadoConversao.push(await conversaoStringNumero(dados[0]));
-            return [resultadoConversao[0], dados[1]];
+            return [resultadoConversao[0], dados[1], 'ok'];
 
         }else if(respostaNumero[0] === 'ok' && respostaNumero[1] === 'string'){
 
             resultadoConversao.push(await conversaoStringNumero(dados[1]));
-            return [dados[0], resultadoConversao[0]];
+            return [dados[0], resultadoConversao[0], 'ok'];
 
         }else if(respostaNumero[0] === 'string' && respostaNumero[1] === 'string'){
 
             resultadoConversao.push(await conversaoStringNumero(dados[0]));
             resultadoConversao.push(await conversaoStringNumero(dados[1]));
-            return [resultadoConversao[0], resultadoConversao[1]];
+            return [resultadoConversao[0], resultadoConversao[1], 'ok'];
 
         }
     } catch (erro) {
