@@ -1,7 +1,7 @@
 
 const { describe } = require('mocha');
 const expect = require("chai").expect;
-const funcaoDeDividir = require('../../domain/division');
+const funcaoDeDividir = require('../../domain/divisao');
 
 
 describe('Testando divisões com múltiplos parametros diferentes', ()=>{
