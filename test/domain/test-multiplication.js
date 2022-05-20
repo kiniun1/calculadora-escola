@@ -1,7 +1,7 @@
 
 const { describe } = require('mocha');
 const expect = require("chai").expect;
-//const funcaoDeMultiplicar = require('../../domain/multiplication');
+const funcaoDeMultiplicar = require('../../domain/multiplication');
 
 
 describe('Testando multiplicações com múltiplos parametros diferentes', ()=>{
