@@ -1,11 +1,11 @@
 const httpStatusResponse = require('../commons/http-response/http-status-response');
 
-const validacaoOperacaoZero = async(dados)=>{
+const validacaoOperacaoZero = async(operador, segundoValor)=>{
     try {
-        if(dados[1] === '√' && dados[2] === 0){
+        if(operador === '√' && segundoValor === 0){
             return 'entrada inválida';
         }
-        if(dados[1] === '/' && dados[2] === 0){
+        if(operador === '/' && segundoValor === 0){
             return 'entrada inválida';
         } else {
             return 'ok'
