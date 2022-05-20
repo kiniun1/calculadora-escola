@@ -1,6 +1,6 @@
 const { expect } = require("chai");
 const { describe } = require("mocha");
-const conversaoStringNumero = require("../../applications/conversaoStringParaNumero");
+const conversaoStringNumero = require("../../applications/conversao-string-para-numero");
 
 describe('Função de conversão de string para numeral', ()=>{
 
