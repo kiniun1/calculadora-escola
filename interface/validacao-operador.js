@@ -14,8 +14,7 @@ const ValidacaoOperador = async(dado)=>{
     } catch (erro) {
         const erroValidacao = await httpStatusResponse(500, (erro.message), 'validacao-operador');
         return erroValidacao;
-    }
-    
-}
+    };
+};
 
 module.exports = ValidacaoOperador;
