@@ -12,7 +12,6 @@ const canalizadorValidacaoOperacao = async(primeiroValor, operador, segundoValor
                 const erroValidacao = await httpStatusResponse(500, 'erro interno', 'canalizador-validacao-operacao');
                 return erroValidacao;
             }else{
-                console.log(resultadoOperacao)
                 resultadoOperacao = resultadoOperacao.toFixed(15);
                 resultadoOperacao = resultadoOperacao.toString();
                 const resultadoFinal = await httpStatusResponse(200, resultadoOperacao, 'canalizador-validacao-operacao');

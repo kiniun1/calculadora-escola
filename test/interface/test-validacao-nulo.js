@@ -1,6 +1,6 @@
 const { expect } = require("chai");
 const { describe } = require("mocha");
-const ValidacaoDadosVaziosOuNulos = require("../../interface/validacao-nulo");
+const ValidacaoDadosVaziosOuNulos = require("../../interface/validacao/validacao-nulo");
 
 describe('Teste função que valida se o dado é nulo, vazio, ou undefined', ()=>{
     it('1º Teste: deve retornar OK já que o dado passado é válido', async()=>{

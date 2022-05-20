@@ -1,6 +1,6 @@
 const expect = require("chai").expect;
 const { describe } = require("mocha");
-const validacaoOperacaoZero = require("../../interface/validacao-operacao-zero");
+const validacaoOperacaoZero = require("../../interface/validacao/validacao-operacao-zero");
 
 describe('Testando a validação se é divisão por 0, ou raiz de indice 0', ()=>{
 
