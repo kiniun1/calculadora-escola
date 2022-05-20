@@ -1,6 +1,6 @@
 const httpStatusResponse = require('../commons/http-response/http-status-response');
 const ValidacaoValoresSaoNumericos = require('./validacao-numero');
-const conversaoStringNumero = require('../applications/conversaoStringParaNumero');
+const conversaoStringNumero = require('../applications/conversao-string-para-numero');
 
 const controllerValidacaoNumeros = async(dados)=>{
     try {
