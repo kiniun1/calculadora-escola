@@ -1,6 +1,6 @@
-const httpStatusResponse = require('../commons/http-response/http-status-response');
-const controllerValidacaoNulos = require('./controller-validacao-nulo');
-const controllerValidacaoNumeros = require('./controller-validacao-numero');
+const httpStatusResponse = require('../../commons/http-response/http-status-response');
+const controllerValidacaoNulos = require('../controller/controller-validacao-nulo');
+const controllerValidacaoNumeros = require('../controller/controller-validacao-numero');
 const ValidacaoOperador = require('./validacao-operador');
 const validacaoOperacaoZero = require('./validacao-operacao-zero');
 

@@ -1,5 +1,5 @@
-const httpStatusResponse = require('../commons/http-response/http-status-response');
-const ValidacaoDadosVaziosOuNulos = require('./validacao-nulo');
+const httpStatusResponse = require('../../commons/http-response/http-status-response');
+const ValidacaoDadosVaziosOuNulos = require('../validacao/validacao-nulo');
 
 const controllerValidacaoNulos = async(dados)=>{
     try {

@@ -1,6 +1,6 @@
 const { expect } = require("chai");
 const { describe } = require("mocha");
-const controllerValidacaoNumeros = require("../../interface/controller-validacao-numero");
+const controllerValidacaoNumeros = require("../../interface/controller/controller-validacao-numero");
 
 describe('Controller validação de valores númericos', ()=>{
 

@@ -1,4 +1,4 @@
-const httpStatusResponse = require('../commons/http-response/http-status-response');
+const httpStatusResponse = require('../../commons/http-response/http-status-response');
 
 const ValidacaoDadosVaziosOuNulos = async(dado)=>{
     try {

@@ -1,6 +1,6 @@
 const { expect } = require("chai");
 const { describe } = require("mocha");
-const ValidacaoOperador = require("../../interface/validacao-operador");
+const ValidacaoOperador = require("../../interface/validacao/validacao-operador");
 
 describe('Teste função que valida se o operador passado está válido', ()=>{
     it('1º Teste: deve retornar OK já que o operador passado é de adição', async()=>{

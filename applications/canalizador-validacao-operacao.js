@@ -1,5 +1,5 @@
 const httpStatusResponse = require('../commons/http-response/http-status-response');
-const validacaoDados = require('../interface/validacao-dados');
+const validacaoDados = require('../interface/validacao/validacao-dados');
 const controllerOperacao = require('./controller-operacao');
 
 
