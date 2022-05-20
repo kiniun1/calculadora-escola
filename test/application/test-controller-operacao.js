@@ -1,6 +1,6 @@
 const expect = require("chai").expect;
 const { describe } = require("mocha");
-const funcaoDeAdicao = require("../../domain/adicao");
+const controllerOperacao = require("../../applications/controller-operacao");
 
 describe('Testando o controller que decide qual função de operação chamar', ()=>{
     it('1º teste: chamar função de adição com os parametros passados pra esse controller e retornar o valor correto', async()=>{
