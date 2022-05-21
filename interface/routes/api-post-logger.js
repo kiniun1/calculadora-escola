@@ -8,7 +8,7 @@ const apiLogger = createLogger({
             format: format.combine(format.timestamp(), format.json())
         }),
         new transports.File({
-            filename: 'api-route-error.log',
+            filename: 'api-route-erro.log',
             level: 'error',
             format: format.combine(format.timestamp(), format.json())
         }),
