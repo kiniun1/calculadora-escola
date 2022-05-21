@@ -7,7 +7,7 @@ Foi utilizado TDD como base de desenvolvimento, e DDD para distribuição por ca
 
 Tendo 6 operações, as 4 básicas de soma, subtração, multiplicação e divisão. Mais porcentagem e raiz.
 
-## Como rodar o projeto
+# Como rodar o projeto
 
 Basta clonar/baixar o projeto, executar: 
 
@@ -32,19 +32,19 @@ E estará rodando na porta 3080. Para ter acesso a calculadora basta digitar no 
 localhost:3080
 ```
 
-## Regras de negócio
+# Estrutura das pastas
 
 Sobre a estrutura do projeto, foi divido nas pastas:
 
-Application
+<li>Application
 
-Commons
+<li>Commons
 
-Domain
+<li>Domain
 
-Interface
+<li>Interface
 
-Test
+<li>Test
 
 # Application
 <details>
