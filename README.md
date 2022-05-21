@@ -1,4 +1,4 @@
-# Calculadora
+# Projeto Calculadora
 Este é um projeto de uma calculadora, sendo utilizado NodeJS no backend e VUE no frontend.
 
 Foi utilizado TDD como base de desenvolvimento, e DDD para distribuição por camadas, assim como conceitos de clean architecture.
@@ -31,6 +31,18 @@ E estará rodando na porta 3080. Para ter acesso a calculadora basta digitar no 
 ```bash
 localhost:3080
 ```
+
+## Bibliotecas usadas:
+<details>
+	<li> Express - Produção
+	<li> Mocha - Testes
+	<li> Chai - Testes
+	<li> Chai-http - Testes
+	<li> cors - Produção
+	<li> mathjs - Produção
+	<li> Nodemon - Densevolvimento
+</details>
+
 
 # Estrutura das pastas
 
