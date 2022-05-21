@@ -1,4 +1,5 @@
 const httpStatusResponse = require('../../commons/http-response/http-status-response');
+const logger = require('../../commons/error-logger');
 
 const validacaoOperacaoZero = async(operador, segundoValor)=>{
     try {
@@ -12,6 +13,7 @@ const validacaoOperacaoZero = async(operador, segundoValor)=>{
         }
     } catch (erro) {
         const erroValidacao = await httpStatusResponse(500, (erro.message), 'validacao-operacao-zero');
+        logger.loggerComum.log('error', erro.message);
         return erroValidacao;
     };
 };

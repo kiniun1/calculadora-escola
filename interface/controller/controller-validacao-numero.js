@@ -1,6 +1,7 @@
 const httpStatusResponse = require('../../commons/http-response/http-status-response');
 const ValidacaoValoresSaoNumericos = require('../validacao/validacao-numero');
 const conversaoStringNumero = require('../../applications/conversao-string-para-numero');
+const logger = require('../../commons/error-logger');
 
 const controllerValidacaoNumeros = async(dados)=>{
     try {
@@ -32,7 +33,8 @@ const controllerValidacaoNumeros = async(dados)=>{
 
         }
     } catch (erro) {
-        const erroValidacao = await httpStatusResponse(500, (erro.message), 'validacao-nulo');
+        const erroValidacao = await httpStatusResponse(500, (erro.message), 'controller-validacao-nulo');
+        logger.loggerComum.log('error', erro.message);
         return erroValidacao;
     };
 };

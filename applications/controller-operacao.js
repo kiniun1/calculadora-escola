@@ -4,6 +4,7 @@ const funcaoDeMultiplicacao = require("../domain/multiplicacao");
 const funcaoDeDivisao = require("../domain/divisao");
 const funcaoDePorcentagem = require("../domain/porcentagem");
 const funcaoDeRaiz = require("../domain/raiz");
+const logger = require('../commons/error-logger');
 
 const controllerOperacao = async(primeiroValor, operador, segundoValor) => {
     try {
@@ -17,7 +18,9 @@ const controllerOperacao = async(primeiroValor, operador, segundoValor) => {
         };
         return actions[operador]?.(primeiroValor, segundoValor) ?? "Calculo não reconhecido";
     } catch (erro) {
-        console.log(erro);
+        const erroControllerOperacao = await httpStatusResponse(500, (erro.message), 'controller-operacao');
+        logger.loggerComum.log('error', erro.message);  
+        return erroControllerOperacao;
     };
 };
 module.exports = controllerOperacao;

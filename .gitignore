@@ -1,1 +1,5 @@
 node_modules
+arquivo.log
+arquivo-erro.log
+api-route-erro.log
+api-route.log

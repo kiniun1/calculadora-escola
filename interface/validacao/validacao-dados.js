@@ -3,11 +3,12 @@ const controllerValidacaoNulos = require('../controller/controller-validacao-nul
 const controllerValidacaoNumeros = require('../controller/controller-validacao-numero');
 const ValidacaoOperador = require('./validacao-operador');
 const validacaoOperacaoZero = require('./validacao-operacao-zero');
+const logger = require('../../commons/error-logger');
+
 
 const validacaoDados = async(dados)=>{
     try {
         const resultadoNulo = await controllerValidacaoNulos(dados);
-
         if(resultadoNulo === 'ok'){
             const resultadoOperador = await ValidacaoOperador(dados[1]);
 
@@ -37,7 +38,8 @@ const validacaoDados = async(dados)=>{
             return 'entrada inválida';
         }
     } catch (erro) {
-        const erroValidacao = await httpStatusResponse(500, (erro.message), 'validacao-operador');
+        const erroValidacao = await httpStatusResponse(500, (erro.message), 'validacao-dados');
+        logger.loggerComum.log('error', erro.message);     
         return erroValidacao;
     };
 };

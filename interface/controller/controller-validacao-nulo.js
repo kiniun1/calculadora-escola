@@ -1,5 +1,6 @@
 const httpStatusResponse = require('../../commons/http-response/http-status-response');
 const ValidacaoDadosVaziosOuNulos = require('../validacao/validacao-nulo');
+const logger = require('../../commons/error-logger');
 
 const controllerValidacaoNulos = async(dados)=>{
     try {
@@ -13,7 +14,8 @@ const controllerValidacaoNulos = async(dados)=>{
             return 'erro'
         }
     } catch (erro) {
-        const erroValidacao = await httpStatusResponse(500, (erro.message), 'validacao-operador');
+        const erroValidacao = await httpStatusResponse(500, (erro.message), 'controller-validacao-nulo');
+        logger.loggerComum.log('error', erro.message);
         return erroValidacao;
     };
 };
