@@ -41,6 +41,7 @@ localhost:3080
 	<li> cors - Produção
 	<li> mathjs - Produção
 	<li> Nodemon - Densevolvimento
+	<li> Winston - Densevolvimento, e produção
 </details>
 
 
