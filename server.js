@@ -5,9 +5,10 @@ const router = require('./interface/routes/api-post-route');
 const app = express();
 
 app.use(express.json());
+app.use(express.static(path.join(__dirname, './dist')));
 app.use(cors({origin: 'http://localhost:8080'}));
 app.use(router);
-  
+
 app.listen(3080, () => {
     console.log(`Server listening on the port::${3080}`);
 });
