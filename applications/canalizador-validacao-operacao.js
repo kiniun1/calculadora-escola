@@ -19,7 +19,7 @@ const canalizadorValidacaoOperacao = async(primeiroValor, operador, segundoValor
                 return resultadoFinal;
             }
         }else {
-            return resultadoValidacao;
+            return await httpStatusResponse(400, 'Entrada inválida', 'canalizador-validacao-operacao');
         }
     } catch (erro) {
         const erroValidacao = await httpStatusResponse(500, (erro.message), 'canalizador-validacao-operacao');
