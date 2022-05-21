@@ -7,17 +7,17 @@ describe('Teste função que valida se o dado é nulo, vazio, ou undefined', ()=
         const resultado = await ValidacaoDadosVaziosOuNulos('a');
         expect(resultado).to.equal('ok');
     });
-    it('2º Teste: deve retornar 1 já que o dado passado é null', async()=>{
+    it('2º Teste: deve retornar uma string escrito nulo já que o dado passado é null', async()=>{
         const dadoNulo = null;
         const resultado = await ValidacaoDadosVaziosOuNulos(dadoNulo);
         expect(resultado).to.equal('nulo');
     });
-    it('3º Teste: deve retornar 1 já que o dado passado é vazio', async()=>{
+    it('3º Teste: deve retornar uma string escrito vazio já que o dado passado é vazio', async()=>{
         const dadoVazio = '';
         const resultado = await ValidacaoDadosVaziosOuNulos(dadoVazio);
         expect(resultado).to.equal('vazio');
     });
-    it('4º Teste: deve retornar 1 já que o dado passado é undefined', async()=>{
+    it('4º Teste: deve retornar uma string escrito indefinido já que o dado passado é indefinido', async()=>{
         let dadoUndefined;
         const resultado = await ValidacaoDadosVaziosOuNulos(dadoUndefined);
         expect(resultado).to.equal('indefinido');

@@ -1,7 +1,6 @@
 const { expect } = require("chai");
 const { describe } = require("mocha");
 const canalizadorValidacaoOperacao = require("../../applications/canalizador-validacao-operacao");
-const httpStatusResponse = require("../../commons/http-response/http-status-response");
 
 
 describe('Chama validação dos dados, e encaminha para o controller das operações se tudo certo', ()=>{
@@ -35,13 +34,13 @@ describe('Chama validação dos dados, e encaminha para o controller das operaç
         expect(resultado.body).to.equal('12.000000000000000');
     });
 
-    it('7º Teste: Deve retornar valor 12 da raiz quadrada 144', async()=>{
+    it('7º Teste: Deve retornar entrada inválida ao tentar fazer divisão por 0', async()=>{
         const resultado = await canalizadorValidacaoOperacao(2, '/', 0);
         expect(resultado.statusCode).to.equal(400);
         expect(resultado.body).to.equal('Entrada inválida');
     });
 
-    it('8º Teste: Deve retornar valor 12 da raiz quadrada 144', async()=>{
+    it('8º Teste: Deve retornar entrada inválida ao tentar fazer a raiz com indice 0', async()=>{
         const resultado = await canalizadorValidacaoOperacao(2, '√', 0);
         expect(resultado.statusCode).to.equal(400);
         expect(resultado.body).to.equal('Entrada inválida');

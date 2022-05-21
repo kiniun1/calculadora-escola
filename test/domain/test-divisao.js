@@ -9,12 +9,12 @@ describe('Função de divisão', ()=>{
         expect(resultadoDivisao).to.equal(1);
     });
 
-    it('2º Teste: Recebendo 2 parametros', async()=>{
+    it('2º Teste: Recebendo 2 parametros deve retornar o valor correto da divisão', async()=>{
         const resultadoDivisao = await funcaoDeDividir(12, 6);
         expect(resultadoDivisao).to.equal(2);
     });
 
-    it('3º Teste: Recebendo 2 parametros com posições invertidas', async()=>{
+    it('3º Teste: Recebendo 2 parametros com posições invertidas do 2° teste, com resultado diferente', async()=>{
         const resultadoDivisao = await funcaoDeDividir(6, 12);
         expect(resultadoDivisao).to.equal(0.5);
     });

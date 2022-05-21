@@ -3,32 +3,32 @@ const { describe } = require("mocha");
 const controllerValidacaoNulos = require("../../interface/controller/controller-validacao-nulo");
 
 describe('Controller de validação dos valores, se são nulos ou não', ()=>{
-    it('1º teste: passando os parametros corretos, sendo adição', async()=>{
+    it('1º teste: passando os parametros corretos, sendo adição, deve retornar ok', async()=>{
         const resultado = await controllerValidacaoNulos([2, '+', 2]);
         expect(resultado).to.equal('ok');
     });
 
-    it('2º teste: passando os parametros corretos, sendo subtração', async()=>{
+    it('2º teste: passando os parametros corretos, sendo subtração, deve retornar ok', async()=>{
         const resultado = await controllerValidacaoNulos([-2, '-', 2]);
         expect(resultado).to.equal('ok');
     });
 
-    it('3º teste: passando os parametros corretos, sendo multiplicação', async()=>{
+    it('3º teste: passando os parametros corretos, sendo multiplicação, deve retornar ok', async()=>{
         const resultado = await controllerValidacaoNulos([2.5, '*', 2]);
         expect(resultado).to.equal('ok');
     });
 
-    it('4º teste: passando os parametros corretos, sendo divisão', async()=>{
+    it('4º teste: passando os parametros corretos, sendo divisão, deve retornar ok', async()=>{
         const resultado = await controllerValidacaoNulos([2, '/', 2]);
         expect(resultado).to.equal('ok');
     });
 
-    it('5º teste: passando os parametros corretos, sendo porcentagem', async()=>{
+    it('5º teste: passando os parametros corretos, sendo porcentagem, deve retornar ok', async()=>{
         const resultado = await controllerValidacaoNulos([2, '%', 2]);
         expect(resultado).to.equal('ok');
     });
 
-    it('6º teste: passando os parametros corretos, sendo raiz', async()=>{
+    it('6º teste: passando os parametros corretos, sendo raiz, deve retornar ok', async()=>{
         const resultado = await controllerValidacaoNulos([2, '√', 2]);
         expect(resultado).to.equal('ok');
     });

@@ -16,7 +16,7 @@ describe('Função de conversão de string para numeral', ()=>{
         expect(result).to.equal(-1);
     });
 
-    it('3º teste: Passando 2,5 como string, deve retornar um 5,5 com tipo numeral', async()=>{
+    it('3º teste: Passando 2,5 como string, deve retornar um 2,5 com tipo numeral', async()=>{
         const result = await conversaoStringNumero('2.5');
         expect(result).to.be.a('number');
         expect(result).to.equal(2.5);

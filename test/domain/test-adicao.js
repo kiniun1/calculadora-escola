@@ -9,12 +9,12 @@ describe('Função de adição', ()=>{
         expect(resultadoAdicao).to.equal(1);
     });
 
-    it('2º Teste: Recebendo 2 parametros', async()=>{
+    it('2º Teste: Recebendo 2 parametros deve retornar a soma correta', async()=>{
         const resultadoAdicao = await funcaoDeAdicao(7, 6);
         expect(resultadoAdicao).to.equal(13);
     });
 
-    it('3º Teste: Recebendo 2 parametros com posições invertidas', async()=>{
+    it('3º Teste: Recebendo 2 parametros com posições invertidas deve retornar o mesmo resultado do 2° teste', async()=>{
         const resultadoAdicao = await funcaoDeAdicao(6, 7);
         expect(resultadoAdicao).to.equal(13);
     });

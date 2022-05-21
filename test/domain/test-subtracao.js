@@ -9,12 +9,12 @@ describe('Função de subtração', ()=>{
         expect(resultadoSubtracao).to.equal(1);
     });
 
-    it('2º Teste: Recebendo 2 parametros', async()=>{
+    it('2º Teste: Recebendo 2 parametros deve retornar o resultado correto da subtração', async()=>{
         const resultadoSubtracao = await funcaoDeSubtracao(7, 6);
         expect(resultadoSubtracao).to.equal(1);
     });
 
-    it('3º Teste: Recebendo 2 parametros com posições invertidas', async()=>{
+    it('3º Teste: Recebendo 2 parametros com posições invertidas do 2° teste, deve retornar um valor diferente.', async()=>{
         const resultadoSubtracao = await funcaoDeSubtracao(6, 7);
         expect(resultadoSubtracao).to.equal(-1);
     });

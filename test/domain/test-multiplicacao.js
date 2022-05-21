@@ -9,12 +9,12 @@ describe('Função de multiplicação', ()=>{
         expect(resultadoMultiplicacao).to.equal(1);
     });
 
-    it('2º Teste: Recebendo 2 parametros', async()=>{
+    it('2º Teste: Recebendo 2 parametros deve retornar o resultado correto da multiplicação', async()=>{
         const resultadoMultiplicacao = await funcaoDeMultiplicar(7, 6);
         expect(resultadoMultiplicacao).to.equal(42);
     });
 
-    it('3º Teste: Recebendo 2 parametros com posições invertidas', async()=>{
+    it('3º Teste: Recebendo 2 parametros com posições invertidas do 2° teste, para mostrar que a ordem dos fatores não altera o resultado deve ser o mesmo resultado', async()=>{
         const resultadoMultiplicacao = await funcaoDeMultiplicar(6, 7);
         expect(resultadoMultiplicacao).to.equal(42);
     });
