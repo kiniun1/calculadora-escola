@@ -1,6 +1,6 @@
 const expect = require("chai").expect;
 const { describe } = require("mocha");
-const validacaoDados = require("../../interface/validacao/validacao-dados");
+const validacaoDados = require("../../../interface/validacao/validacao-dados");
 
 describe('Testando a função que valida os dados, chamando outras funções individuais e no final retorna se está tudo válido', ()=>{
     it('1º teste: passando os parametros corretos, sendo adição', async()=>{

@@ -1,6 +1,6 @@
 const expect = require("chai").expect;
 const { describe } = require("mocha");
-const controllerValidacaoNulos = require("../../interface/controller/controller-validacao-nulo");
+const controllerValidacaoNulos = require("../../../interface/controller/controller-validacao-nulo");
 
 describe('Controller de validação dos valores, se são nulos ou não', ()=>{
     it('1º teste: passando os parametros corretos, sendo adição, deve retornar ok', async()=>{
