@@ -36,14 +36,12 @@ describe('Chama validação dos dados, e encaminha para o controller das operaç
 
     it('7º Teste: Deve retornar entrada inválida ao tentar fazer divisão por 0', async()=>{
         const resultado = await canalizadorValidacaoOperacao(2, '/', 0);
-        console.log(resultado);
         expect(resultado.statusCode).to.equal(400);
         expect(resultado.body).to.equal('Entrada inválida');
     });
 
     it('8º Teste: Deve retornar entrada inválida ao tentar fazer a raiz com indice 0', async()=>{
         const resultado = await canalizadorValidacaoOperacao(2, '√', 0);
-        console.log(resultado);
         expect(resultado.statusCode).to.equal(400);
         expect(resultado.body).to.equal('Entrada inválida');
     });
